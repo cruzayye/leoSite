@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, Close } from "@mui/icons-material"; // MUI icons
+import { Close, Menu } from "@mui/icons-material"; // MUI icons
 import styled from "@emotion/styled";
 
 const Navbar = styled.nav`
@@ -16,6 +16,12 @@ const Navbar = styled.nav`
   align-items: center;
   padding-top: 2rem;
   z-index: 2;
+
+  @media (max-width: 768px) {
+    width: ${(
+  { isOpen },
+) => (isOpen ? "60vw" : "0")}; /* Bigger for smaller screens */
+  }
 `;
 
 const MenuButton = styled.button`
@@ -62,6 +68,11 @@ const NavLink = styled.li`
     bottom: -5px; /* Adjust spacing */
     left: 10%;
   }
+    
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 `;
 
 const Backdrop = styled.div`
@@ -83,14 +94,21 @@ export default function Sidebar() {
 
   return (
     <>
-    
       <MenuButton onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? <Close fontSize="large" /> : <Menu fontSize="large" />}
       </MenuButton>
 
       <Navbar isOpen={isOpen}>
         <NavLinks>
-          <NavLink href="https://www.styleseat.com/m/v/leogomez?ncd_source=social_media" target="_blank" onClick={() => setIsOpen(false)}>Book Now</NavLink>
+          <NavLink>
+            <a
+              href="https://www.styleseat.com/m/v/leogomez?ncd_source=social_media"
+              target="_blank"
+              onClick={() => setIsOpen(false)}
+            >
+              Book Now
+            </a>
+          </NavLink>{" "}
           <NavLink onClick={() => setIsOpen(false)}>SMP</NavLink>
         </NavLinks>
       </Navbar>
