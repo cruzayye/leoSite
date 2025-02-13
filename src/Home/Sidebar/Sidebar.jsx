@@ -38,14 +38,29 @@ const NavLinks = styled.ul`
 `;
 
 const NavLink = styled.li`
+  display: block;
   padding: 1rem 0;
   color: white;
   font-size: 1.5rem;
   cursor: pointer;
-  transition: color 0.2s;
+  text-align: center;
+  position: relative;
+  list-style: none; /* Remove default bullet points */
 
-&:hover {
-    color: #FFD700; 
+  &:hover {
+    color: #FFD700; /* Gold on hover */
+  }
+
+  /* Add a thin underline to all but the last link */
+  &:not(:last-child)::after {
+    content: "";
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.6); /* Light white */
+    position: absolute;
+    bottom: -5px; /* Adjust spacing */
+    left: 10%;
   }
 `;
 
@@ -75,7 +90,7 @@ export default function Sidebar() {
 
       <Navbar isOpen={isOpen}>
         <NavLinks>
-          <NavLink href="https://www.styleseat.com/m/v/leogomez?ncd_source=social_media" target="_blank" onClick={() => setIsOpen(false)}>BookNow</NavLink>
+          <NavLink href="https://www.styleseat.com/m/v/leogomez?ncd_source=social_media" target="_blank" onClick={() => setIsOpen(false)}>Book Now</NavLink>
           <NavLink onClick={() => setIsOpen(false)}>SMP</NavLink>
         </NavLinks>
       </Navbar>
