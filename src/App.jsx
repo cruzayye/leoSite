@@ -1,12 +1,19 @@
 import { createRoot } from "react-dom/client";
 import Home from "./Home/Home";
-import "./App.scss"
+import "./App.scss";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Smp from "./Home/smp/smp";
 
 const App = () => {
   return (
-    <div className="App">
-      <Home />
-    </div>
+    <BrowserRouter>
+      <main className="App">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/smp" element={<Smp />} />
+        </Routes>
+      </main>
+    </BrowserRouter>
   );
 };
 

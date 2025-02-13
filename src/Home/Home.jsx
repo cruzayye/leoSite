@@ -1,5 +1,10 @@
 import './Home.scss'
 import BackgroundVideo from '../Assets/backgroundClip_lowBitrate.mp4'
+import { Link } from 'react-router-dom';
+import { Button } from '@mui/material';
+import Navbar from './Sidebar/Sidebar';
+
+
 
 const Home = () => {
   return (
@@ -12,10 +17,8 @@ const Home = () => {
 
       {/* Content */}
       <div className="content">
+        <Navbar />
         <h1>LION MANE</h1>
-        <a href="" target="_blank" rel="noopener noreferrer">
-          <h2>book now</h2>
-        </a>
       </div>
 
     </div>
