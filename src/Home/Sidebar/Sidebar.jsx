@@ -54,7 +54,7 @@ const NavLink = styled.li`
   list-style: none; /* Remove default bullet points */
 
   &:hover {
-    color: #FFD700; /* Gold on hover */
+    color: #E3A45A; /* Gold on hover */
   }
 
   /* Add a thin underline to all but the last link */

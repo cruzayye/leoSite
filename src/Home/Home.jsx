@@ -1,7 +1,5 @@
 import './Home.scss'
-import BackgroundVideo from '../Assets/backgroundClip_lowBitrate.mp4'
-import { Link } from 'react-router-dom';
-import { Button } from '@mui/material';
+import BackgroundVideo from '../Assets/backgroundClip_lowBitrate2.mp4'
 import Navbar from './Sidebar/Sidebar';
 
 
@@ -18,7 +16,7 @@ const Home = () => {
       {/* Content */}
       <div className="content">
         <Navbar />
-        <h1>LION MANE</h1>
+        <img src={'../Assets/logo2.PNG'} alt="logo" className='logo' />
       </div>
 
     </div>

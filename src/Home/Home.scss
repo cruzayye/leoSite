@@ -3,6 +3,8 @@
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    
+
   }
   
   .background-video {
@@ -34,6 +36,24 @@
         margin: 0;
       }
     }
+
+    .logo {
+      max-width: 200px;
+      width: 100%; /* Makes sure it shrinks proportionally */
+    }
+    
+    @media (max-width: 768px) { /* Target tablets and smaller */
+      .logo {
+        max-width: 150px; /* Adjust for mobile */
+      }
+    }
+    
+    @media (max-width: 480px) { /* Target smaller mobile screens */
+      .logo {
+        max-width: 120px;
+      }
+    }
+    
 
 
   }
