@@ -16,7 +16,6 @@ const Home = () => {
       {/* Content */}
       <div className="content">
         <Navbar />
-        <img src={'../Assets/logo2.PNG'} alt="logo" className='logo' />
       </div>
 
     </div>
