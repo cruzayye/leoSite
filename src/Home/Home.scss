@@ -17,45 +17,6 @@
     object-fit: cover; /* Ensures the video scales properly */
   }
   
-  .content {
-    position: relative;
-    color: white; /* Adjust text color for visibility */
-    text-align: center;
-    padding: 20px;
 
-    a {
-      color: white;
-      display: inline-block;
-      width: fit-content;
-      background-color: rgba(0, 0, 0, 0.5);;
-      text-decoration: none;
-      margin-top: 29vh;
-
-      h2 {
-        padding: .5rem;
-        margin: 0;
-      }
-    }
-
-    .logo {
-      max-width: 200px;
-      width: 100%; /* Makes sure it shrinks proportionally */
-    }
-    
-    @media (max-width: 768px) { /* Target tablets and smaller */
-      .logo {
-        max-width: 150px; /* Adjust for mobile */
-      }
-    }
-    
-    @media (max-width: 480px) { /* Target smaller mobile screens */
-      .logo {
-        max-width: 120px;
-      }
-    }
-    
-
-
-  }
 
 

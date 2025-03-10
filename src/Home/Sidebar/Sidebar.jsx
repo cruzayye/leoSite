@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Close, Menu } from "@mui/icons-material"; // MUI icons
 import styled from "@emotion/styled";
 import { useNavigate } from 'react-router-dom';
+import './Sidebar.scss'
+
 
 
 const Navbar = styled.nav`
@@ -36,6 +38,10 @@ const MenuButton = styled.button`
   color: white;
   font-size: 2rem;
   z-index: 100;
+
+    @media (max-width: 768px) {
+    left: 10px; /* Adjust position for mobile */
+  }
 `;
 
 const NavLinks = styled.ul`
@@ -100,13 +106,20 @@ export default function Sidebar() {
     navigate('/smp');
   };
 
+  const handleHomeClick = () => {
+    setIsOpen(false);
+    navigate('/');
+  };
+
   return (
-    <>
+    <div className="content">
       <MenuButton onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? <Close fontSize="large" /> : <Menu fontSize="large" />}
       </MenuButton>
+      <img src={'../Assets/logo2.PNG'} alt="logo" className='logo' />
 
-      <Navbar isOpen={isOpen}>
+      <Navbar isOpen={isOpen} >
+
         <NavLinks>
           <NavLink>
             <a
@@ -118,9 +131,10 @@ export default function Sidebar() {
             </a>
           </NavLink>
           <NavLink onClick={handleSMPClick}>SMP</NavLink>
-          </NavLinks>
+          <NavLink onClick={handleHomeClick}>HOME</NavLink>
+        </NavLinks>
       </Navbar>
       <Backdrop isOpen={isOpen} onClick={() => setIsOpen(false)} />
-    </>
+    </div>
   );
 }
