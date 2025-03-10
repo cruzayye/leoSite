@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Close, Menu } from "@mui/icons-material"; // MUI icons
 import styled from "@emotion/styled";
+import { useNavigate } from 'react-router-dom';
+
 
 const Navbar = styled.nav`
   position: fixed;
@@ -90,7 +92,13 @@ const Backdrop = styled.div`
 `;
 
 export default function Sidebar() {
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
+
+  const handleSMPClick = () => {
+    setIsOpen(false);
+    navigate('/smp');
+  };
 
   return (
     <>
@@ -108,9 +116,9 @@ export default function Sidebar() {
             >
               Book Now
             </a>
-          </NavLink>{" "}
-          <NavLink onClick={() => setIsOpen(false)}>SMP</NavLink>
-        </NavLinks>
+          </NavLink>
+          <NavLink onClick={handleSMPClick}>SMP</NavLink>
+          </NavLinks>
       </Navbar>
       <Backdrop isOpen={isOpen} onClick={() => setIsOpen(false)} />
     </>
