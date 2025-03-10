@@ -116,7 +116,7 @@ export default function Sidebar() {
       <MenuButton onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? <Close fontSize="large" /> : <Menu fontSize="large" />}
       </MenuButton>
-      <img src={'../Assets/logo2.PNG'} alt="logo" className='logo' />
+      <img src={'/Assets/logo2.PNG'} alt="logo" className='logo' />
 
       <Navbar isOpen={isOpen} >
 
