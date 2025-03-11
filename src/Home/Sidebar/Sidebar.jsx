@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Close, Menu } from "@mui/icons-material"; // MUI icons
 import styled from "@emotion/styled";
 import { useNavigate } from 'react-router-dom';
+import logo from '../../Assets/logo2.jpg';
 import './Sidebar.scss'
 
 
@@ -116,7 +117,7 @@ export default function Sidebar() {
       <MenuButton onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? <Close fontSize="large" /> : <Menu fontSize="large" />}
       </MenuButton>
-      <img src={'../../Assets/logo2.jpg'} alt="logo" className='logo' />
+      <img src={logo} alt="logo" className='logo' />
 
       <Navbar isOpen={isOpen} >
 
