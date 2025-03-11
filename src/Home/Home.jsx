@@ -8,7 +8,7 @@ const Home = () => {
     <div className="background-container">
       {/* Video Background */}
       <video autoPlay loop muted playsInline className="background-video">
-        <source src={'../Assets/backgroundClip_lowBitrate2.mp4'} type="video/mp4" />
+        <source src={'../../Assets/backgroundClip_lowBitrate2.mp4'} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
