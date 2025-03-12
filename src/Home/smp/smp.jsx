@@ -1,12 +1,12 @@
 import { Typography } from "@mui/material";
 import Navbar from "../Sidebar/Sidebar";
 import photo1 from "../../Assets/DSC02580.jpg";
-import photo2 from "../../Assets/DSC02577.jpg";
+// import photo2 from "../../Assets/DSC02577.JPG";
 import photo3 from "../../Assets/IMG_0796.jpg";
 import photo4 from "../../Assets/IMG_0794.jpg";
 import "./smp.scss";
 
-const Smp = () => {
+const Smp = () => { 
   return (
     <div className="smp-container">
       <Navbar />
@@ -33,7 +33,7 @@ const Smp = () => {
         <div className="right">
           <div className="photo-grid">
             <img src={photo1} className="smp-photo" alt="SMP 1" />
-            <img src={photo2} className="smp-photo" alt="SMP 1" />
+            {/* <img src={photo2} className="smp-photo" alt="SMP 1" /> */}
             <img src={photo3} className="smp-photo" alt="SMP 1" />
             <img src={photo4} className="smp-photo" alt="SMP 1" />
           </div>
