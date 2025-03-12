@@ -1,11 +1,9 @@
 import { useState } from "react";
 import { Close, Menu } from "@mui/icons-material"; // MUI icons
 import styled from "@emotion/styled";
-import { useNavigate } from 'react-router-dom';
-import logo from '../../Assets/logo2.jpg';
-import './Sidebar.scss'
-
-
+import { useNavigate } from "react-router-dom";
+import logo from "../../Assets/logo2.jpg";
+import "./Sidebar.scss";
 
 const Navbar = styled.nav`
   position: fixed;
@@ -23,9 +21,8 @@ const Navbar = styled.nav`
   z-index: 2;
 
   @media (max-width: 768px) {
-    width: ${(
-  { isOpen },
-) => (isOpen ? "60vw" : "0")}; /* Bigger for smaller screens */
+    width: ${({ isOpen }) =>
+      isOpen ? "60vw" : "0"}; /* Bigger for smaller screens */
   }
 `;
 
@@ -40,7 +37,7 @@ const MenuButton = styled.button`
   font-size: 2rem;
   z-index: 100;
 
-    @media (max-width: 768px) {
+  @media (max-width: 768px) {
     left: 10px; /* Adjust position for mobile */
   }
 `;
@@ -63,7 +60,7 @@ const NavLink = styled.li`
   list-style: none; /* Remove default bullet points */
 
   &:hover {
-    color: #E3A45A; /* Gold on hover */
+    color: #e3a45a; /* Gold on hover */
   }
 
   /* Add a thin underline to all but the last link */
@@ -77,7 +74,7 @@ const NavLink = styled.li`
     bottom: -5px; /* Adjust spacing */
     left: 10%;
   }
-    
+
   a {
     color: inherit;
     text-decoration: none;
@@ -104,12 +101,12 @@ export default function Sidebar() {
 
   const handleSMPClick = () => {
     setIsOpen(false);
-    navigate('/smp');
+    navigate("/smp");
   };
 
   const handleHomeClick = () => {
     setIsOpen(false);
-    navigate('/');
+    navigate("/");
   };
 
   return (
@@ -117,10 +114,9 @@ export default function Sidebar() {
       <MenuButton onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? <Close fontSize="large" /> : <Menu fontSize="large" />}
       </MenuButton>
-      <img src={logo} alt="logo" className='logo' />
+      <img src={logo} alt="logo" className="logo" />
 
-      <Navbar isOpen={isOpen} >
-
+      <Navbar isOpen={isOpen}>
         <NavLinks>
           <NavLink>
             <a
