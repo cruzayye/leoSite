@@ -12,16 +12,21 @@ const Smp = () => {
       <Navbar />
       <div className="about-smp">
         <div className="left">
+          <h2>SMP</h2>
           <Typography>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
+            Scalp Micropigmentation (SMP) is the cutting-edge hair solution
+            that's revolutionizing the game for anyone dealing with thinning
+            hair or baldness. Think of it as the ultimate hair tattoo –
+            thousands of micro-dots creating that fresh buzz-cut look without
+            the commitment of surgery or daily product routines. This minimalist
+            approach delivers instant style upgrade with zero downtime, making
+            it the go-to choice for celebs, athletes, and trend-setters who want
+            to look their best without the hassle. SMP works with your natural
+            features to create custom hairlines and density that looks authentic
+            in any lighting, from studio shots to club scenes. The best part?
+            You'll walk out with renewed confidence and a low-maintenance look
+            that stays fresh for years, letting you focus on your hustle instead
+            of your hairline.
           </Typography>
         </div>
 
