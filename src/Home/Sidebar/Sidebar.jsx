@@ -109,12 +109,18 @@ export default function Sidebar() {
     navigate("/");
   };
 
+  const handleLogoClick = () => {
+    navigate("/");
+  };
+
   return (
     <div className="content">
       <MenuButton onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? <Close fontSize="large" /> : <Menu fontSize="large" />}
       </MenuButton>
-      <img src={logo} alt="logo" className="logo" />
+      <NavLink className="logo-link" onClick={handleLogoClick}>
+        <img src={logo} alt="logo" className="logo" />
+      </NavLink>
 
       <Navbar isOpen={isOpen}>
         <NavLinks>

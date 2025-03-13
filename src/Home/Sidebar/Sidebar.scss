@@ -17,6 +17,10 @@
       }
     }
 
+    .logo-link:not(:last-child)::after {
+     border-bottom: none !important;
+    }
+
 
   }
 
