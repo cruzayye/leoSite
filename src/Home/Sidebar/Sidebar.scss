@@ -33,10 +33,16 @@
     .logo {
       max-width: 150px; /* Adjust for mobile */
     }
+    .logo-link {
+      padding-bottom: 0 !important;
+    }
+
+
   }
   
   @media (max-width: 480px) { /* Target smaller mobile screens */
     .logo {
       max-width: 120px;
+
     }
   }
