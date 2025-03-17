@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Close, Menu } from "@mui/icons-material"; // MUI icons
+import { Close, Menu, Instagram, Phone } from "@mui/icons-material"; // Added Instagram and Phone icons
 import styled from "@emotion/styled";
 import { useNavigate } from "react-router-dom";
 import logo from "../../Assets/logo2.jpg";
@@ -122,7 +122,7 @@ export default function Sidebar() {
         <img src={logo} alt="logo" className="logo" />
       </NavLink>
 
-      <Navbar isOpen={isOpen}>
+      <Navbar isOpen={isOpen} className="nav-bar">
         <NavLinks>
           <NavLink>
             <a
@@ -136,6 +136,14 @@ export default function Sidebar() {
           <NavLink onClick={handleSMPClick}>SMP</NavLink>
           <NavLink onClick={handleHomeClick}>HOME</NavLink>
         </NavLinks>
+        <div className="social-icons">
+          <a href="https://www.instagram.com/lionmaneco" target="_blank" rel="noopener noreferrer">
+            <Instagram fontSize="medium" />
+          </a>
+          <a href="tel:+1234567890">
+            <Phone fontSize="medium" />
+          </a>
+        </div>
       </Navbar>
       <Backdrop isOpen={isOpen} onClick={() => setIsOpen(false)} />
     </div>

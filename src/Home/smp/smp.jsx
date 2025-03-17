@@ -1,9 +1,9 @@
 import { Typography } from "@mui/material";
 import Navbar from "../Sidebar/Sidebar";
-import photo1 from "../../Assets/DSC02580.jpg";
-import photo2 from "../../Assets/DSC02577.png";
-import photo3 from "../../Assets/IMG_0796.jpg";
-import photo4 from "../../Assets/IMG_0794.jpg";
+import photo1 from "../../Assets/leo2.png";
+import photo2 from "../../Assets/leo1.png";
+import photo3 from "../../Assets/smp_white.png";
+import photo4 from "../../Assets/smp_black.png";
 import "./smp.scss";
 
 const Smp = () => { 
