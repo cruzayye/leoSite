@@ -1,12 +1,10 @@
-import './Home.scss'
-import Navbar from './Sidebar/Sidebar';
-import backgroundVideo from '../Assets/backgroundClip_lowBitrate2.mp4'
-
-
+import "./Home.scss";
+import Navbar from "./Sidebar/Sidebar";
+import backgroundVideo from "../Assets/backgroundClip_lowBitrate2.mp4";
 
 const Home = () => {
   return (
-    <div className="background-container">
+    <div className="background-container" style={{ touchAction: "none" }}>
       {/* Video Background */}
       <video autoPlay loop muted playsInline className="background-video">
         <source src={backgroundVideo} type="video/mp4" />
@@ -17,11 +15,8 @@ const Home = () => {
       <div className="content">
         <Navbar />
       </div>
-
     </div>
-
-
   );
-}
+};
 
 export default Home;
