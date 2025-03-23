@@ -28,7 +28,7 @@ const Navbar = styled.nav`
 
 const MenuButton = styled.button`
   position: fixed;
-  top: 20px;
+  top: 25px;
   left: 20px;
   background: none;
   border: none;
