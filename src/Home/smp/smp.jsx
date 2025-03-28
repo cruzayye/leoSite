@@ -1,12 +1,12 @@
 import { Typography } from "@mui/material";
 import Navbar from "../Sidebar/Sidebar";
-import photo1 from "../../Assets/leo2.png";
-import photo2 from "../../Assets/leo1.png";
+import photo1 from "../../Assets/leo2-1.png";
+import photo2 from "../../Assets/leo1-1.png";
 import photo3 from "../../Assets/smp_white.png";
 import photo4 from "../../Assets/smp_black.png";
 import "./smp.scss";
 
-const Smp = () => { 
+const Smp = () => {
   return (
     <div className="smp-container">
       <Navbar />
@@ -32,10 +32,26 @@ const Smp = () => {
 
         <div className="right">
           <div className="photo-grid">
-            <img src={photo1} className="smp-photo" alt="SMP 1" />
-            <img src={photo2} className="smp-photo" alt="SMP 1" />
-            <img src={photo3} className="smp-photo" alt="SMP 1" />
-            <img src={photo4} className="smp-photo" alt="SMP 1" />
+            <img
+              src={photo1}
+              className="smp-photo"
+              alt="Professional SMP treatment being performed by Portland barber specialist"
+            />
+            <img
+              src={photo2}
+              className="smp-photo"
+              alt="Scalp Micropigmentation procedure in progress at Lion Mane Barber in Portland"
+            />
+            <img
+              src={photo3}
+              className="smp-photo bottom-photos"
+              alt="SMP before and after results showing hairline restoration and density"
+            />
+            <img
+              src={photo4}
+              className="smp-photo bottom-photos"
+              alt="Completed Scalp Micropigmentation with natural-looking hairline in Portland"
+            />
           </div>
         </div>
       </div>

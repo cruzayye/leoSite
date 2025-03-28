@@ -45,7 +45,11 @@
         grid-template-columns: 1fr 1fr; // Keep 2 columns
         grid-template-rows: 1fr 1fr;    // Keep 2 rows
         gap: 8px;                    // Slightly smaller gap for mobile
-        height: 300px;               // Adjust height for mobile
+        height: 300px;
+
+        .bottom-photos {
+          margin-top: -20px;
+        }
       }
     }
     }
